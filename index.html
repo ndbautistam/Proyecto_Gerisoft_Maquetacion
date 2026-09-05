@@ -1,137 +1,580 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Este es un ejemplo de una pagina wedbasica">
+
+    <meta name="description" content="Este es un ejemplo de una pagina web basica">
+
     <title>Gerisoft</title>
+
 </head>
 
 <body>
+
+    <!-- ============ ENCABEZADO Y NAVEGACIÓN ============ -->
+
     <header>
-        <nav>
-            <div>
-                <a href="#">
-                    <img src="assets\images/sena.svg" alt="logo Sena" width="50" </a>
-            </div>
+
+        <div>
+
+            <a href="#">
+
+                <img src="assets/images/logo Hogar geriatrico.png"
+                     alt="Logo Hogar Geriátrico"
+                     width="180">
+
             </a>
-            <nav aria-label="Menú principal">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
 
-                    <li><a href="#servicios">Servicios</a></li>
+        </div>
 
-                    <li><a href="#nosotros">Nosotros</a></li>
+        <nav aria-label="Menú principal">
 
-                    <li><a href="#testimonios">Testimonios</a></li>
+            <ul>
 
-                    <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
 
-                    < <li><a href="login.html">Iniciar Sesión</a></li>
+                <li>
+                    <a href="#servicios">Servicios</a>
+                </li>
 
-                </ul>
-            </nav>
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="#galeria">Galería</a>
+                </li>
+
+                <li>
+                    <a href="#testimonios">Testimonios</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Iniciar Sesión</a>
+                </li>
+
+            </ul>
+
+        </nav>
 
     </header>
 
+
     <hr>
 
-    <main>
-        <section id="inicio" aria-label="Presentación principal">
-            < <h1>Bienvenido a Hogar Geriatrico Campo Alegre</h1>
-                <p> Amor Vida y Servicio.</p>
-                <a href="#servicios">Conoce nuestros servicios</a>
-        </section>
 
-        <section id="servicios" aria-labelledby="titulo-servicios">
+    <!-- ============ CONTENIDO PRINCIPAL ============ -->
+
+    <main>
+
+
+        <!-- ============ INICIO ============ -->
+
+        <section id="inicio" aria-label="Presentación principal">
+
             <center>
-                <h2 id="titulo-servicios">Nuestros Servicios</h2>
+
+                <h1>Bienvenido a Hogar Geriátrico Campo Alegre</h1>
+
+                <p>Amor, Vida y Servicio.</p>
+
+                <a href="#servicios">
+                    Conoce nuestros servicios
+                </a>
+
             </center>
 
+        </section>
+
+
+        <hr>
+
+
+        <!-- ============ SERVICIOS ============ -->
+
+        <section id="servicios" aria-labelledby="titulo-servicios">
+
+            <center>
+
+                <h2 id="titulo-servicios">
+                    Nuestros Servicios
+                </h2>
+
+            </center>
+
+
             <table align="center">
+
                 <tr>
 
                     <td align="center">
+
                         <article>
 
-                            <img src="servicio1.jpg" alt="Descripción del servicio 1">
+                            <img src="assets/images/icono atencion medica.png"
+                                 alt="Atención médica">
+
                             <h3>Atención Médica</h3>
-                            <p>Contamos con personal especializado para el cuidado de la salud</p>
+
+                            <p>
+                                Contamos con personal especializado
+                                para el cuidado de la salud.
+                            </p>
+
                         </article>
+
                     </td>
 
+
                     <td align="center">
+
                         <article>
 
-                            <img src="servicio2.jpg" alt="Descripción del servicio 2">
+                            <img src="assets/images/icono_acompañamiento.png"
+                                 alt="Acompañamiento">
+
                             <h3>Acompañamiento</h3>
-                            <p>Brindamos compañía y apoyo emocional a nuestros residentes.</p>
+
+                            <p>
+                                Brindamos compañía y apoyo emocional
+                                a nuestros residentes.
+                            </p>
 
                         </article>
+
                     </td>
+
 
                     <td align="center">
 
                         <article>
 
-                            <img src="servicio3.jpg" alt="Descripción del servicio 3">
+                            <img src="assets/images/icono_alimentacion.png"
+                                 alt="Alimentación saludable">
+
                             <h3>Alimentación Saludable</h3>
-                            <p>Ofrecemos una alimentación balanceada y adaptada a sus necesidades.</p>
+
+                            <p>
+                                Ofrecemos una alimentación balanceada
+                                y adaptada a sus necesidades.
+                            </p>
+
                         </article>
+
                     </td>
+
+
                     <td align="center">
 
                         <article>
 
-                            <img src="servicio3.jpg" alt="Descripción del servicio 3">
+                            <img src="assets/images/icono instalaciones.png"
+                                 alt="Instalaciones cómodas">
+
                             <h3>Instalaciones Cómodas</h3>
-                            <p>Espacios seguros, amplios y adaptados para su bienestar.</p>
+
+                            <p>
+                                Espacios seguros, amplios y adaptados
+                                para su bienestar.
+                            </p>
+
                         </article>
+
                     </td>
+
                 </tr>
+
             </table>
 
         </section>
-            <hr color="red" size="5">
-        <section id="nosotros" aria-labelledby="titulo-nosotros">
-            <h2 id="titulo-nosotros">Sobre Nosotros</h2>
-            <h2 id="titulo-Más de 15 años cuidando con amor"> Más de 15 años cuidando con amor</h2>
-            <p>En Campo Alegre creemos que cada adulto mayor merece vivir con dignidad, alegría y plena atención. Nuestro equipo de profesionales trabaja con vocación y compromiso para que cada residente se sienta en casa.
 
-Contamos con instalaciones modernas, programas de actividades recreativas, atención médica continua y un entorno familiar que promueve el bienestar integral.</p>
+
+        <hr color="red" size="5">
+
+
+        <!-- ============ SOBRE NOSOTROS ============ -->
+
+        <section id="nosotros" aria-labelledby="titulo-nosotros">
+
             <table align="center">
-                 <tr>
+
+                <tr>
+
                     <td align="center">
 
+                        <img src="assets/images/quienes somos.jpg"
+                             alt="Personas adultas mayores"
+                             width="450">
 
-                <h2 id="titulo-Nuestra Misión">Nuestra Misión</h2>
-                <p>Brindar atención integral, humana y especializada a nuestros adultos mayores, garantizando su bienestar físico, emocional y social en un ambiente seguro, cálido y familiar. Trabajamos cada día para que cada residente viva con dignidad, alegría y la mejor calidad de vida posible.</p>
-                     </td>
-                   
-                     <td align="center">
-                <h2 id="titulo-Nuestra Visión">Nuestra Visión</h2>
-                <p>Ser el hogar geriátrico de referencia en la región, reconocido por la excelencia en el cuidado de adultos mayores, la calidez de nuestro equipo y la innovación en servicios gerontológicos. Aspiramos a ser un modelo de atención donde cada persona envejezca con plenitud y amor.</p>
-                   </td>
-                   
                     </td>
+
+
+                    <td align="center">
+
+                        <h2 id="titulo-nosotros">
+                            Sobre Nosotros
+                        </h2>
+
+                        <h2 id="titulo-experiencia">
+                            Más de 15 años cuidando con amor
+                        </h2>
+
+                        <p>
+                            En Campo Alegre creemos que cada adulto mayor
+                            merece vivir con dignidad, alegría y plena atención.
+                            Nuestro equipo de profesionales trabaja con vocación
+                            y compromiso para que cada residente se sienta en casa.
+
+                            <br><br>
+
+                            Contamos con instalaciones modernas, programas de
+                            actividades recreativas, atención médica continua
+                            y un entorno familiar que promueve el bienestar integral.
+                        </p>
+
+                    </td>
+
                 </tr>
+
             </table>
+
+
+            <hr>
+
+
+            <!-- ============ MISIÓN Y VISIÓN ============ -->
+
+            <table align="center">
+
+                <tr>
+
+                    <td align="center">
+
+                        <h2 id="titulo-mision">
+                            Nuestra Misión
+                        </h2>
+
+                        <p>
+                            Brindar atención integral, humana y especializada
+                            a nuestros adultos mayores, garantizando su bienestar
+                            físico, emocional y social en un ambiente seguro,
+                            cálido y familiar.
+
+                            Trabajamos cada día para que cada residente viva
+                            con dignidad, alegría y la mejor calidad de vida posible.
+                        </p>
+
+                    </td>
+
+
+                    <td align="center">
+
+                        <h2 id="titulo-vision">
+                            Nuestra Visión
+                        </h2>
+
+                        <p>
+                            Ser el hogar geriátrico de referencia en la región,
+                            reconocido por la excelencia en el cuidado de adultos
+                            mayores, la calidez de nuestro equipo y la innovación
+                            en servicios gerontológicos.
+
+                            Aspiramos a ser un modelo de atención donde cada
+                            persona envejezca con plenitud y amor.
+                        </p>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
         </section>
+
+
+        <hr>
+
+
+        <!-- ============ GALERÍA ============ -->
+
+        <section id="galeria" aria-labelledby="titulo-galeria">
+
+            <center>
+
+                <h2 id="titulo-galeria">
+                    Galería
+                </h2>
+
+            </center>
+
+
+            <table align="center">
+
+                <tr>
+
+                    <td>
+
+                        <img src="assets/images/galeria 1.jpg"
+                             alt="Adultos mayores"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+
+                    <td>
+
+                        <img src="assets/images/galeria 2.jpg"
+                             alt="Adultos mayores"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+
+                    <td>
+
+                        <img src="assets/images/galeria 3.jpg"
+                             alt="Adultos mayores"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+
+                        <img src="assets/images/galeria 4.jpg"
+                             alt="Adulto mayor"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+
+                    <td>
+
+                        <img src="assets/images/galeria 5.jpg"
+                             alt="Adultos mayores"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+
+                    <td>
+
+                        <img src="assets/images/galeria 6.jpg"
+                             alt="Adulto mayor"
+                             width="450"
+                             height="300">
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ============ TESTIMONIOS ============ -->
+
         <section id="testimonios" aria-labelledby="titulo-testimonios">
-            <h2 id="titulo-testimonios">Lo que dicen nuestros clientes</h2>
-            <!-- blockquote: cita textual de un tercero (el cliente) -->
-            <blockquote cite="https://ejemplo.com">
-                <p>"Excelente servicio, superó nuestras expectativas."</p>
-                <footer>— Nombre del Cliente, Empresa</footer>
-            </blockquote>
+
+            <center>
+
+                <h2 id="titulo-testimonios">
+                    Lo que dicen las familias
+                </h2>
+
+            </center>
+
+
+            <table align="center">
+
+                <tr>
+
+                    <td align="center">
+
+                        <blockquote>
+
+                            <p>⭐⭐⭐⭐⭐</p>
+
+                            <p>
+                                "Mi mamá llegó a Campo Alegre hace dos años
+                                y desde el primer día se sintió como en casa.
+                                El personal es increíblemente atento y cariñoso."
+                            </p>
+
+                            <footer>
+
+                                <strong>Claudia Ramírez</strong>
+
+                                <br>
+
+                                Hija de residente
+
+                            </footer>
+
+                        </blockquote>
+
+                    </td>
+
+
+                    <td align="center">
+
+                        <blockquote>
+
+                            <p>⭐⭐⭐⭐⭐</p>
+
+                            <p>
+                                "La atención médica es de primera. Me tranquiliza
+                                saber que mi padre está bien cuidado las 24 horas
+                                del día con profesionales comprometidos."
+                            </p>
+
+                            <footer>
+
+                                <strong>Roberto Fernández</strong>
+
+                                <br>
+
+                                Hijo de residente
+
+                            </footer>
+
+                        </blockquote>
+
+                    </td>
+
+
+                    <td align="center">
+
+                        <blockquote>
+
+                            <p>⭐⭐⭐⭐⭐</p>
+
+                            <p>
+                                "Las actividades recreativas son fantásticas.
+                                Mi tía participa en todo y está más activa y feliz
+                                que nunca. ¡Los recomiendo ampliamente!"
+                            </p>
+
+                            <footer>
+
+                                <strong>María Soledad</strong>
+
+                                <br>
+
+                                Familiar de residente
+
+                            </footer>
+
+                        </blockquote>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
         </section>
 
 
+        <hr>
 
+
+        <!-- ============ CONTACTO ============ -->
+
+        <section id="contacto" aria-labelledby="titulo-contacto">
+
+            <center>
+                <h2>Estamos aquí para ayudarle</h2>
+                <p>Contáctenos para conocer más sobre nuestros servicios y cómo podemos ayudar a su familiar a disfrutar de una vida plena y con cuidado de calidad.</p>
+                <h2 id="titulo-contacto">
+                    Contáctanos
+                </h2>
+
+            </center>
+
+
+            <address>
+
+                Correo:
+                <a href="mailto:info@campoalegre.com">
+                    info@campoalegre.com
+                </a>
+
+                <br>
+
+                Teléfono:
+                <a href="tel:+573001687718">
+                    +57 3001687718
+                </a>
+
+                <br>
+
+                Ubicación:
+                Carrera 11 # 20-69 sur
+
+            </address>
+
+        </section>
 
 
     </main>
+
+
+    <!-- ============ PIE DE PÁGINA ============ -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Hogar Geriátrico Campo Alegre.
+            Todos los derechos reservados.
+        </p>
+
+        <nav aria-label="Redes sociales">
+
+            <ul>
+
+                <li>
+                    <a href="#">Facebook</a>
+                </li>
+
+                <li>
+                    <a href="#">Instagram</a>
+                </li>
+
+                <li>
+                    <a href="#">WhatsApp</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </footer>
+
 
 </body>
 
