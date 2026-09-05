@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Administrativo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Panel administrativo del Hogar Geriátrico Campo Alegre.">
+<title>Panel Administrativo | Hogar Geriátrico Campo Alegre</title>
 </head>
 <body>
-    
+
+    <!-- ============ BARRA SUPERIOR ============ -->
+    <header>
+        <h1>Panel Administrativo</h1>
+
+        <nav aria-label="Cuenta de usuario">
+            <ul>
+                <li>
+                    <button type="button" aria-haspopup="true" aria-expanded="false">
+                        A Administrador
+                    </button>
+                    <ul>
+                        <li><a href="index.html">Mi perfil</a></li>
+                        <li><a href="login.html">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-panel">
+
+        <!-- ============ MENÚ LATERAL DE MÓDULOS ============ -->
+        <aside aria-label="Menú de administración">
+            <a href="index.html">
+                <img src="assets/images/logo Hogar geriatrico.png" alt="Logo Hogar Geriátrico Campo Alegre" width="120">
+            </a>
+
+            <nav aria-label="Módulos del sistema">
+                <ul>
+                    <div>
+                    <img src="assets/images/icons/inicio.png" alt="inicio" width="20">
+                    <li><a href="inicio.html" aria-current="page">Inicio</a></li>
+                    </div>
+
+                    <img src="assets/images/icons/residentes.png" alt="residentes"  width="20">
+                    <li><a href="residentes.html">Residentes</a></li>
+
+                    <img src="assets/images/icons/personal.png" alt="personal medico" width="20">
+                    <li><a href="personal.html">Personal</a></li>
+
+                    <div>
+                        <img src="assets/images/icons/citas medicas.png" alt="" width="20">
+                        <li><a href="citas-medicas.html">Citas Médicas</a></li>
+                    </div>
+
+                    <div>
+                         <img src="assets/images/icons/hc.png" alt="doctor-female" width="20">
+                        <li><a href="historias-clinicas.html">Historias Clínicas</a></li>
+                    </div>
+
+                    <div>
+                        <li><a href="actividades.html">Actividades</a></li>
+                    </div>
+
+                    <div>
+                        <li><a href="reportes.html">Reportes</a></li>
+                    </div>
+
+                    <div>
+                        <li><a href="configuracion.html">Configuración</a></li>
+                    </div>
+                    
+                    <div>
+                        <li><a href="login.html">Cerrar Sesión</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ============ CONTENIDO PRINCIPAL ============ -->
+        <main>
+
+            <header>
+                <h2>Bienvenido, Administrador</h2>
+                <p>Resumen general del hogar geriátrico.</p>
+            </header>
+
+            <!-- Tarjetas de resumen -->
+            <section aria-labelledby="titulo-resumen">
+                <h3 id="titulo-resumen">Resumen general</h3>
+
+                <ul>
+                    <li>
+                        <p>25</p>
+                        <p>Residentes Registrados</p>
+                    </li>
+                    <li>
+                        <p>12</p>
+                        <p>Personal Activo</p>
+                    </li>
+                    <li>
+                        <p>8</p>
+                        <p>Citas Hoy</p>
+                    </li>
+                    <li>
+                        <p>15</p>
+                        <p>Actividades Programadas</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Próximas citas -->
+            <section id="proximas-citas" aria-labelledby="titulo-proximas-citas">
+
+                <header>
+                    <h3 id="titulo-proximas-citas">Próximas Citas</h3>
+                    <a href="citas-medicas.html">Ver todas las citas &rarr;</a>
+                </header>
+
+                <table>
+                    <caption>Listado de próximas citas médicas programadas</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Residente</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Especialidad</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>María Gómez</td>
+                            <td>25/05/2025</td>
+                            <td>09:00 AM</td>
+                            <td>Medicina General</td>
+                            <td><span>Confirmada</span></td>
+                        </tr>
+                        <tr>
+                            <td>José Ramírez</td>
+                            <td>25/05/2025</td>
+                            <td>10:30 AM</td>
+                            <td>Cardiología</td>
+                            <td><span>Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Torres</td>
+                            <td>25/05/2025</td>
+                            <td>02:00 PM</td>
+                            <td>Nutrición</td>
+                            <td><span>Confirmada</span></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Peña</td>
+                            <td>26/05/2025</td>
+                            <td>11:00 AM</td>
+                            <td>Fisioterapia</td>
+                            <td><span>Confirmada</span></td>
+                        </tr>
+                        <tr>
+                            <td>Elena Vargas</td>
+                            <td>26/05/2025</td>
+                            <td>03:30 PM</td>
+                            <td>Neurología</td>
+                            <td><span>Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <!-- Accesos rápidos -->
+            <section aria-labelledby="titulo-accesos-rapidos">
+                <h3 id="titulo-accesos-rapidos">Accesos rápidos</h3>
+
+                <ul>
+                    <li>
+                        <a href="residentes.html#nuevo">
+                            <span aria-hidden="true"></span>
+                            Nuevo Residente
+                        </a>
+                    </li>
+                    <li>
+                        <a href="citas-medicas.html#agendar">
+                            <span aria-hidden="true"></span>
+                            Agendar Cita
+                        </a>
+                    </li>
+                    <li>
+                        <a href="historias-clinicas.html#nueva">
+                            <span aria-hidden="true"></span>
+                            Nueva Historia Clínica
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hogar Geriátrico Campo Alegre. Panel administrativo interno.</p>
+    </footer>
+
 </body>
 </html>
