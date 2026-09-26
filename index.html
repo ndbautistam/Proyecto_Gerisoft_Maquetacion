@@ -11,192 +11,176 @@
     <meta name="description" content="Este es un ejemplo de una pagina web basica">
 
     <title>Gerisoft</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ============ ENCABEZADO Y NAVEGACIÓN ============ -->
+    <!--encabezado-->
 
-    <header>
+    <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm bg-white w-100 sticky-top">
 
         <div>
-
             <a href="#">
-
-                <img src="assets/images/logo Hogar geriatrico.png"
-                     alt="Logo Hogar Geriátrico"
-                     width="180">
-
+                <img src="assets/images/logo Hogar geriatrico.png" alt="Logo de la empresa" width="150" class="img-
+fluid">
             </a>
-
         </div>
 
-        <nav aria-label="Menú principal">
+        <nav class="navbar navbar-expand-lg p-0 bg-white" aria-label="Menú principal">
 
-            <ul>
-
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#servicios">Servicios</a>
-                </li>
-
-                <li>
-                    <a href="#nosotros">Nosotros</a>
-                </li>
-
-                <li>
-                    <a href="#galeria">Galería</a>
-                </li>
-
-                <li>
-                    <a href="#testimonios">Testimonios</a>
-                </li>
-
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
-
-                <li>
-                    <a href="login.html">Iniciar Sesión</a>
-                </li>
-
+        <button class="navbar-toggler" type="button"
+                     data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html"></a></li>
+                    <a class="btn btn-sm text-white" style="background-color: #39A900;"
+                    href="login.html">
+                    Iniciar Sesión 
+                </a>
             </ul>
-
+        </div>
         </nav>
-
     </header>
-
 
     <hr>
 
-
-    <!-- ============ CONTENIDO PRINCIPAL ============ -->
+    <!--CONTENIDO PRINCIPAL-->
 
     <main>
 
 
-        <!-- ============ INICIO ============ -->
-
-        <section id="inicio" aria-label="Presentación principal">
-
-            <center>
-
-                <h1>Bienvenido a Hogar Geriátrico Campo Alegre</h1>
-
-                <p>Amor, Vida y Servicio.</p>
-
-                <a href="#servicios">
-                    Conoce nuestros servicios
-                </a>
-
-            </center>
-
-        </section>
+        <!--INICIO-->
 
 
-        <hr>
+       <section id="inicio" class="position-relative d-flex align-items-center py-5 overflow-hidden" style="min-height: 85vh;">
+    
+    <!-- Imagen de fondo -->
+    <img src="assets/images/imagen index .jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="z-index: 1;" alt="Presentación principal">
 
+    <!--Degradado blanco-->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 2; background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.2) 100%);"></div>
+
+    <!--lo que va encima de la imagen -->
+    <div class="container position-relative py-5" style="z-index: 3;">
+        <div class="row">
+            <div class="col-lg-5 col-md-7 text-start">
+
+                <p class="text-success text-uppercase fw-bold mb-2 fs-7 tracking-wide">
+                    BIENVENIDOS A CAMPO ALEGRE
+                </p>
+
+                <h1 class="display-3 fw-bold text-dark mb-1" style="font-family: serif;">
+                    Hogar Geriátrico
+                </h1>
+
+                <h2 class="display-6 text-success fw-bold mb-3" style="font-family: serif;">
+                    Amor, Vida y Servicio
+                </h2>
+
+                <p class="text-muted mb-4 fs-6">
+                    Brindamos atención integral, humana y especializada para mejorar la calidad de vida de nuestros adultos mayores.
+                </p>
+
+                <!-- Botones de acción (Faltaban en la vista previa) -->
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#conoce-mas" class="btn btn-success px-4 py-2 fw-semibold rounded-2">
+                        Conoce más
+                    </a>
+                    <a href="#servicios" class="btn btn-outline-success px-4 py-2 fw-semibold rounded-2">
+                        Nuestros servicios
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- ============ SERVICIOS ============ -->
 
-        <section id="servicios" aria-labelledby="titulo-servicios">
+        <section id="servicios" class="py-5" aria-labelledby="titulo-servicios">
+            <div class="container-fluid px-lg-5">
 
-            <center>
-
-                <h2 id="titulo-servicios">
+                <h2 id="titulo-servicios" class="text-center fw-bold mb-2" style="color:#00304D;">
                     Nuestros Servicios
                 </h2>
+                
+                <div class="mx-auto mb-5" style="width: 50px; height: 3px; background-color: #FFC107;"></div>
 
-            </center>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 text-center p-3">
+                       <div class="mt-3">
+                        <img src="assets/images/icono atencion medica.png" alt="Atención médica" width="45" height="45" class="mx-auto d-block">
+                       </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold text-dark mb-2">Atención Médica</h3>
+                                <p class="card-text text-secondary fs-6"> 
+                                Contamos con personal especializado para el cuidado de la salud.
+                                </p>                     
+                        </div>
+                    </article>
+                </div>
 
-            <table align="center">
-
-                <tr>
-
-                    <td align="center">
-
-                        <article>
-
-                            <img src="assets/images/icono atencion medica.png"
-                                 alt="Atención médica">
-
-                            <h3>Atención Médica</h3>
-
-                            <p>
-                                Contamos con personal especializado
-                                para el cuidado de la salud.
+                    <div class="col">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 text-center p-3">
+                            <div class="mt-3">
+                                <img src="assets/images/icono_acompañamiento.png" alt="Acompañamiento" width="45" height="45" class="mx-auto d-block">
+                            </div>
+                            <div class="card-body">
+                            <h3 class="h5 card-title fw-bold text-dark mb-2">Acompañamiento</h3>
+                            <p class="card-text text-secondary fs-6">
+                                Brindamos compañía y apoyo emocional a nuestros residentes.
                             </p>
-
+                            </div>
                         </article>
-
-                    </td>
-
-
-                    <td align="center">
-
-                        <article>
-
-                            <img src="assets/images/icono_acompañamiento.png"
-                                 alt="Acompañamiento">
-
-                            <h3>Acompañamiento</h3>
-
-                            <p>
-                                Brindamos compañía y apoyo emocional
-                                a nuestros residentes.
+                        </div>
+                    
+                        <div class="col">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 text-center p-3">
+                            <div class="mt-3">
+                            <img src="assets/images/icono_alimentacion.png" alt="Alimentación saludable" width="45" height="45" class="mx-auto d-block">
+                            </div>
+                            <div class="card-body">
+                            <h3 class="h5 card-title fw-bold text-dark mb-2">Alimentación Saludable</h3>
+                            <p class="card-text text-secondary fs-6">
+                                Ofrecemos una alimentación balanceada y adaptada a sus necesidades.
                             </p>
-
+                            </div>
                         </article>
+                        </div>
+                    
 
-                    </td>
 
 
-                    <td align="center">
-
-                        <article>
-
-                            <img src="assets/images/icono_alimentacion.png"
-                                 alt="Alimentación saludable">
-
-                            <h3>Alimentación Saludable</h3>
-
-                            <p>
-                                Ofrecemos una alimentación balanceada
-                                y adaptada a sus necesidades.
+                        <div class="col">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 text-center p-3">
+                            <div class="mt-3">
+                            <img src="assets/images/icono instalaciones.png" alt="Instalaciones cómodas" width="45" height="45" class="mx-auto d-block">
+                            </div>
+                            <div class="card-body">
+                            <h3 class="h5 card-title fw-bold text-dark mb-2">Instalaciones Cómodas</h3>
+                            <p class="card-text text-secondary fs-6">
+                                Espacios seguros, amplios y adaptados para su bienestar.
                             </p>
-
+                            </div>
                         </article>
-
-                    </td>
-
-
-                    <td align="center">
-
-                        <article>
-
-                            <img src="assets/images/icono instalaciones.png"
-                                 alt="Instalaciones cómodas">
-
-                            <h3>Instalaciones Cómodas</h3>
-
-                            <p>
-                                Espacios seguros, amplios y adaptados
-                                para su bienestar.
-                            </p>
-
-                        </article>
-
-                    </td>
-
-                </tr>
-
-            </table>
-
+                    </div>
+                </div>
+                </div>
         </section>
 
 
@@ -205,377 +189,325 @@
 
         <!-- ============ SOBRE NOSOTROS ============ -->
 
-        <section id="nosotros" aria-labelledby="titulo-nosotros">
+        <section id="nosotros" class="py-5" style="background-color: #f3f8f5;" aria-labelledby="titulo-nosotros">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <img src="assets/images/quienes somos.jpg" alt="Personas adultas mayores"
+                             class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height:  480px;">
 
-            <table align="center">
-
-                <tr>
-
-                    <td align="center">
-
-                        <img src="assets/images/quienes somos.jpg"
-                             alt="Personas adultas mayores"
-                             width="450">
-
-                    </td>
-
-
-                    <td align="center">
-
-                        <h2 id="titulo-nosotros">
-                            Sobre Nosotros
-                        </h2>
-
-                        <h2 id="titulo-experiencia">
-                            Más de 15 años cuidando con amor
-                        </h2>
-
-                        <p>
-                            En Campo Alegre creemos que cada adulto mayor
-                            merece vivir con dignidad, alegría y plena atención.
-                            Nuestro equipo de profesionales trabaja con vocación
-                            y compromiso para que cada residente se sienta en casa.
-
-                            <br><br>
-
-                            Contamos con instalaciones modernas, programas de
-                            actividades recreativas, atención médica continua
-                            y un entorno familiar que promueve el bienestar integral.
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-success text-uppercase fw-bold mb-2 tracking-wide fs-6">
+                            Quiénes somos
                         </p>
 
-                    </td>
+                        <h2 id="titulo-nosotros" class="display-6 fw-bold text-dark mb-4">
+                           Más de 15 años cuidando con amor
+                        </h2>
+                        <p class="text-secondary fs-6 mb-3">
+                        En Campo Alegre creemos que cada adulto mayor merece vivir con dignidad, alegría y plena atención. Nuestro equipo de profesionales trabaja con vocación y compromiso para que cada residente se sienta en casa.
+                            </p>
+                        <p class="text-secondary fs-6 mb-3">
+                            Contamos con instalaciones modernas, programas de actividades recreativas, atención médica continua y un entorno familiar que promueve el bienestar integral.
+                        </p>
+                        <div class="row pt-3 text-start">
+                            <div class="col-4">
+                                <h3 class="fw-bold text-success display-6 mb-0">150+</h3>
+                                <p class="text-muted small mb-0">profesionales</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold text-success display-6 mb-0">15</h3>
+                            <p class="fw-bold text-muted small mb-0">Años de experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
 
-                </tr>
-
-            </table>
-
-
-            <hr>
-
-
-            <!-- ============ MISIÓN Y VISIÓN ============ -->
-
-            <table align="center">
-
-                <tr>
-
-                    <td align="center">
-
-                        <h2 id="titulo-mision">
+            <!--MISIÓN Y VISIÓN-->
+        <section id="misión-visión" class="py-5" style="background-color: #f3f8f5;">
+                       <div class="container py-3">
+                        <div class="row row-cols-1 row-cols-sm-2 g-4">
+                            <div class="col">
+                                <article class="card h-100 border-0 shadow-sm rounded-4 p-4 position-relative overflow-hidden bg-white"> 
+                                    <div class="position-absolute top-0 end-0 rounded-circle"
+                                    style="width: 140px; height: 140px; background-color: #e2f0e8; margin-top: -40px; margin-right: -40 px; pointer-events: none;">
+                                </div>
+                                <div class="card-body p-2 position-relative z-1">
+                        <!-- Imagen de Ícono de Misión -->
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-4" 
+                             style="background-color: #e2f0e8; width: 50px; height: 50px;">
+                            <img src="assets/images/icons/icono_misión.png" alt="Misión" width="28" height="28">
+                        </div>
+                                    <h2 id="titulo-mision" class="h3 card-title fw-bold text-dark mb-2">
                             Nuestra Misión
                         </h2>
 
-                        <p>
-                            Brindar atención integral, humana y especializada
-                            a nuestros adultos mayores, garantizando su bienestar
-                            físico, emocional y social en un ambiente seguro,
-                            cálido y familiar.
-
-                            Trabajamos cada día para que cada residente viva
-                            con dignidad, alegría y la mejor calidad de vida posible.
+                        <div class="mb-4" style="width: 35px; height: 3px; background-color: #FFC107;"></div>
+                        <p class="card-text text-secundary lh-lg fs-6 mb-0">
+                            Brindar atención integral, humana y especializada a nuestros adultos mayores, garantizando su bienestar físico, emocional y social en un ambiente seguro, cálido y familiar. Trabajamos cada día para que cada residente viva con dignidad, alegría y la mejor calidad de vida posible.
                         </p>
+                                </div>
+                                </article>
+                            </div>
+                        <div class="col">
+                            <article class="card h-100 border-0 shadow-sm rounded-4 p-4 position-relative overflow-hidden bg-white">
+                                <div class="position-absolute top-0 end-0 rounded-circle"
+                                    style="width: 140px; height: 140px; background-color: #e2f0e8; margin-top: -40px; margin-right: -40px; pointer-events: none;">
+                                </div>
+                                <div class="card-body p-2 position-relative z-1">
+                                    <img src="assets/images/icons/icons-visión.png" alt="visión" width="28" height="28">
+                                </div>
 
-                    </td>
 
-
-                    <td align="center">
-
-                        <h2 id="titulo-vision">
+                        <h2 id="titulo-vision" class="h3 card-title fw-bold text-dark mb-2">
                             Nuestra Visión
                         </h2>
+                            <div class="mb-4" style="width: 35px; height: 3px; background-color: #FFC107;"></div>
 
-                        <p>
-                            Ser el hogar geriátrico de referencia en la región,
-                            reconocido por la excelencia en el cuidado de adultos
-                            mayores, la calidez de nuestro equipo y la innovación
-                            en servicios gerontológicos.
-
-                            Aspiramos a ser un modelo de atención donde cada
-                            persona envejezca con plenitud y amor.
+                        <p class="card-text text-secondary lh-lg fs-6 mb-0">
+                            Ser el hogar geriátrico de referencia en la región, reconocido por la excelencia en el cuidado de adultos mayores, la calidez de nuestro equipo y la innovación en servicios gerontológicos. Aspiramos a ser un modelo de atención donde cada persona envejezca con plenitud y amor.
                         </p>
-
-                    </td>
-
-                </tr>
-
-            </table>
-
+                    </div>
+                        </article>
+                        </div>
+                       </div>
+                    </div>   
         </section>
 
 
-        <hr>
+     
 
 
-        <!-- ============ GALERÍA ============ -->
+        <!--GALERÍA-->
 
-        <section id="galeria" aria-labelledby="titulo-galeria">
+        <section id="galeria" aria-labelledby="titulo-galeria" class="py-5">
+    <div class="container">
+        
+        <h2 id="titulo-galeria" class="text-center mb-4">
+            Galería
+        </h2>
 
-            <center>
+        <div class="row g-4">
 
-                <h2 id="titulo-galeria">
-                    Galería
-                </h2>
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 1.jpg" 
+                     alt="Adultos mayores" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
-            </center>
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 2.jpg" 
+                     alt="Adultos mayores" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 3.jpg" 
+                     alt="Adultos mayores" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
-            <table align="center">
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 4.jpg" 
+                     alt="Adulto mayor" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
-                <tr>
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 5.jpg" 
+                     alt="Adultos mayores" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
-                    <td>
+            <div class="col-12 col-md-4">
+                <img src="assets/images/galeria 6.jpg" 
+                     alt="Adulto mayor" 
+                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+            </div>
 
-                        <img src="assets/images/galeria 1.jpg"
-                             alt="Adultos mayores"
-                             width="450"
-                             height="300">
+        </div>
 
-                    </td>
-
-
-                    <td>
-
-                        <img src="assets/images/galeria 2.jpg"
-                             alt="Adultos mayores"
-                             width="450"
-                             height="300">
-
-                    </td>
-
-
-                    <td>
-
-                        <img src="assets/images/galeria 3.jpg"
-                             alt="Adultos mayores"
-                             width="450"
-                             height="300">
-
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-
-                        <img src="assets/images/galeria 4.jpg"
-                             alt="Adulto mayor"
-                             width="450"
-                             height="300">
-
-                    </td>
+    </div>
+</section>
 
 
-                    <td>
 
-                        <img src="assets/images/galeria 5.jpg"
-                             alt="Adultos mayores"
-                             width="450"
-                             height="300">
+        <!--TESTIMONIOS-->
+<section id="testimonios" class="py-5" aria-labelledby="titulo-testimonios" style="background-color: #f2f8f6;">
+    <div class="container">
 
-                    </td>
+        <!-- Título -->
+        <h2 id="titulo-testimonios" class="text-center fw-bold mb-2" style="color: #00304D;">
+            Lo que dicen las familias
+        </h2>
+        <div class="mx-auto mb-5" style="width: 50px; height: 3px; background-color: #FFC107;"></div>
 
+        <!-- Grilla principal -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                    <td>
+            <!-- Testimonio 1 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning fs-5">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <blockquote class="blockquote fs-6 text-secondary fst-italic mb-4">
+                                "Mi mamá llegó a Campo Alegre hace dos años y desde el primer día se sintió como en casa. El personal es increíblemente atento y cariñoso."
+                            </blockquote>
+                        </div>
+                        <footer>
+                            <strong class="d-block text-dark fw-bold">Claudia Ramírez</strong>
+                            <small class="text-muted">Hija de residente</small>
+                        </footer>
+                    </div>
+                </div>
+            </div>
 
-                        <img src="assets/images/galeria 6.jpg"
-                             alt="Adulto mayor"
-                             width="450"
-                             height="300">
+            <!-- Testimonio 2 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning fs-5">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <blockquote class="blockquote fs-6 text-secondary fst-italic mb-4">
+                                "La atención médica es de primera. Me tranquiliza saber que mi padre está bien cuidado las 24 horas del día con profesionales comprometidos."
+                            </blockquote>
+                        </div>
+                        <footer>
+                            <strong class="d-block text-dark fw-bold">Roberto Fernández</strong>
+                            <small class="text-muted">Hijo de residente</small>
+                        </footer>
+                    </div>
+                </div>
+            </div>
 
-                    </td>
+            <!-- Testimonio 3 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning fs-5">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <blockquote class="blockquote fs-6 text-secondary fst-italic mb-4">
+                                "Las actividades recreativas son fantásticas. Mi tía participa en todo y está más activa y feliz que nunca. ¡Los recomiendo ampliamente!"
+                            </blockquote>
+                        </div>
+                        <footer>
+                            <strong class="d-block text-dark fw-bold">María Soledad</strong>
+                            <small class="text-muted">Familiar de residente</small>
+                        </footer>
+                    </div>
+                </div>
+            </div>
 
-                </tr>
+        </div>
+    </div>
+</section>
+        <!--CONTACTO-->
 
-            </table>
+        <section id="contacto" aria-labelledby="titulo-contacto" class="py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <span class="text-success fw-bold text-uppercase small tracking-wider">
+                            CONTÁCTENOS
+                            </span>
+                            <h2 id="titulo-contacto" class="display-6 fw-bold mb-3" style="color: #00304D;">
+                                Estamos aquí para ayudarle
+                            </h2>
+                           <p class="text-muted mb-4 lead fs-6">
+                Contáctenos para conocer más sobre nuestros servicios y cómo podemos ayudar a su familiar a disfrutar de una vida plena y con cuidado de calidad.</p>
+                            <address class="fst-normal d-flex flex-column gap-3 fs-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fs-5">📍</span>
+                                <span>calle 18 sur n°10-44 sur </span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fs-5">📞</span>
+                                <a href="tel:+573001687718" class="text-decoration-none text-dark">
+                                    +57 3001687718
+                                </a>
+                            </div>
 
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fs-5">✉️</span>
+                                <a href="mailto:info@campoalegre.com.ar" class="text-decoration-none text-dark">
+                                    info@campoalegre.com.ar
+                                </a>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-3 text-muted">
+                                <span class="fs-5">🕒</span>
+                                <span>Atención 24 hs, los 365 días</span>
+                            </div>
+                        </address>
+                    </div>
+
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5" style="background-color: #f8f9fa;">
+                         <form>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-medium text-dark">Nombre</label>
+                                    <input type="text" class="form-control rounded-3 border-light-subtle bg-white py-2" id="nombre" placeholder="Juan">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apellido" class="form-label fw-medium text-dark">Apellido</label>
+                            <input type="text" class="form-control rounded-3 border-light-subtle bg-white py-2" id="apellido" placeholder="García">                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-medium text-dark">Email</label>
+                                    <input type="email" class="form-control rounded-3 border-light-subtle bg-white py-2" id="email" placeholder="juan@email.com">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label fw-medium text-dark">Teléfono</label>
+                                    <input type="tel" class="form-control rounded-3 border-light-subtle bg-white py-2" id="telefono" placeholder="+54 11 ...">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label fw-medium text-dark">Mensaje</label>
+                                    <textarea class="form-control rounded-3 border-light-subtle bg-white" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarle?"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn w-100 text-white fw-bold py-2 rounded-3" style="background-color: #196f3d;">
+                                    Enviar mensaje
+                                </button>
+                                </form>
+                    </div>
+                        </div>
+
+                    </div>
+                   </div>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.3560702895843!2d-72.94355713081931!3d5.695444694922893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45b3ea7bd65f%3A0xb68958fd519795a6!2sCl.%2018%20Sur%20%2310-44%2C%20Sogamoso%2C%20Boyac%C3%A1!5e1!3m2!1ses!2sco!4v1790373119517!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </section>
-
-
-        <hr>
-
-
-        <!-- ============ TESTIMONIOS ============ -->
-
-        <section id="testimonios" aria-labelledby="titulo-testimonios">
-
-            <center>
-
-                <h2 id="titulo-testimonios">
-                    Lo que dicen las familias
-                </h2>
-
-            </center>
-
-
-            <table align="center">
-
-                <tr>
-
-                    <td align="center">
-
-                        <blockquote>
-
-                            <p>⭐⭐⭐⭐⭐</p>
-
-                            <p>
-                                "Mi mamá llegó a Campo Alegre hace dos años
-                                y desde el primer día se sintió como en casa.
-                                El personal es increíblemente atento y cariñoso."
-                            </p>
-
-                            <footer>
-
-                                <strong>Claudia Ramírez</strong>
-
-                                <br>
-
-                                Hija de residente
-
-                            </footer>
-
-                        </blockquote>
-
-                    </td>
-
-
-                    <td align="center">
-
-                        <blockquote>
-
-                            <p>⭐⭐⭐⭐⭐</p>
-
-                            <p>
-                                "La atención médica es de primera. Me tranquiliza
-                                saber que mi padre está bien cuidado las 24 horas
-                                del día con profesionales comprometidos."
-                            </p>
-
-                            <footer>
-
-                                <strong>Roberto Fernández</strong>
-
-                                <br>
-
-                                Hijo de residente
-
-                            </footer>
-
-                        </blockquote>
-
-                    </td>
-
-
-                    <td align="center">
-
-                        <blockquote>
-
-                            <p>⭐⭐⭐⭐⭐</p>
-
-                            <p>
-                                "Las actividades recreativas son fantásticas.
-                                Mi tía participa en todo y está más activa y feliz
-                                que nunca. ¡Los recomiendo ampliamente!"
-                            </p>
-
-                            <footer>
-
-                                <strong>María Soledad</strong>
-
-                                <br>
-
-                                Familiar de residente
-
-                            </footer>
-
-                        </blockquote>
-
-                    </td>
-
-                </tr>
-
-            </table>
-
-        </section>
-
-
-        <hr>
-
-
-        <!-- ============ CONTACTO ============ -->
-
-        <section id="contacto" aria-labelledby="titulo-contacto">
-
-            <center>
-                <h2>Estamos aquí para ayudarle</h2>
-                <p>Contáctenos para conocer más sobre nuestros servicios y cómo podemos ayudar a su familiar a disfrutar de una vida plena y con cuidado de calidad.</p>
-                <h2 id="titulo-contacto">
-                    Contáctanos
-                </h2>
-
-            </center>
-
-
-            <address>
-
-                Correo:
-                <a href="mailto:info@campoalegre.com">
-                    info@campoalegre.com
-                </a>
-
-                <br>
-
-                Teléfono:
-                <a href="tel:+573001687718">
-                    +57 3001687718
-                </a>
-
-                <br>
-
-                Ubicación:
-                Carrera 11 # 20-69 sur
-
-            </address>
-
-        </section>
-
 
     </main>
+            
 
+    <!--PIE DE PÁGINA-->
 
-    <!-- ============ PIE DE PÁGINA ============ -->
-
-    <footer>
-
-        <p>
+    <footer class="py-4 border-top text-center text-muted">
+<div class="container">
+            <p class="mb-0 small">
             &copy; 2026 Hogar Geriátrico Campo Alegre.
-            Todos los derechos reservados.
+            Elaborado por Dayana Bautista Y John Montañez| Gerisoft.
         </p>
-
-        <nav aria-label="Redes sociales">
-
-            <ul>
-
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-
-                <li>
-                    <a href="#">WhatsApp</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
+</div>
     </footer>
-
-
+       
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
