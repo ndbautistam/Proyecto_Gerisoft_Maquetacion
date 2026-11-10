@@ -15,6 +15,105 @@
 rel="stylesheet"> 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
 rel="stylesheet">
+<!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Estilos del botón WhatsApp -->
+    <style>
+        
+    /* =================================
+       BOTÓN FLOTANTE DE WHATSAPP
+    ================================= */
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        text-decoration: none;
+        z-index: 1000;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        animation: movimientoWhatsApp 2s infinite;
+        transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+        background-color: #188f45;
+        color: white;
+        animation-play-state: paused;
+        transform: scale(1.1);
+    }
+
+    @keyframes movimientoWhatsApp {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* =================================
+       EFECTOS DEL MENÚ DE NAVEGACIÓN
+    ================================= */
+
+    .navbar .nav-link {
+        color: #333333;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .nav-link:hover {
+        color: #25a900;
+        transform: translateY(-3px);
+    }
+
+    /* Línea animada debajo de los enlaces */
+
+    .navbar .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #25a900;
+        transition: width 0.3s ease;
+    }
+
+    .navbar .nav-link:hover::after {
+        width: 100%;
+    }
+
+
+    /* =================================
+       BOTÓN INICIAR SESIÓN
+    ================================= */
+
+    .navbar .btn {
+        transition: all 0.3s ease;
+    }
+
+    .navbar .btn:hover {
+        background-color: #188000;
+        border-color: #188000;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+
+    </style>
+
 </head>
 
 <body>
@@ -278,60 +377,118 @@ fluid">
         </section>
 
 
-     
 
+<!-- ============ GALERÍA AUTOMÁTICA ============ -->
 
-        <!--GALERÍA-->
+<section id="galeria"
+         class="py-5"
+         aria-labelledby="titulo-galeria"
+         style="background-color: #f3f8f5;">
 
-        <section id="galeria" aria-labelledby="titulo-galeria" class="py-5">
     <div class="container">
-        
-        <h2 id="titulo-galeria" class="text-center mb-4">
-            Galería
+
+        <!-- Título -->
+        <h2 id="titulo-galeria"
+            class="text-center fw-bold mb-2"
+            style="color: #00304D;">
+
+            Nuestra Galería
+
         </h2>
 
-        <div class="row g-4">
+        <!-- Descripción -->
+        <p class="text-center text-secondary mb-4">
+            Conoce nuestros espacios y momentos especiales.
+        </p>
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 1.jpg" 
-                     alt="Adultos mayores" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
-            </div>
+        <!-- Carrusel automático -->
+        <div class="row justify-content-center">
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 2.jpg" 
-                     alt="Adultos mayores" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
-            </div>
+            <div class="col-12 col-lg-9">
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 3.jpg" 
-                     alt="Adultos mayores" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
-            </div>
+                <div id="galeriaAutomatica"
+                     class="carousel slide carousel-fade"
+                     data-bs-ride="carousel"
+                     data-bs-interval="3000"
+                     data-bs-pause="false"
+                     data-bs-wrap="true">
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 4.jpg" 
-                     alt="Adulto mayor" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
-            </div>
+                    <!-- Fotografías -->
+                    <div class="carousel-inner rounded-4 shadow">
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 5.jpg" 
-                     alt="Adultos mayores" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
-            </div>
+                        <!-- Imagen 1 -->
+                        <div class="carousel-item active">
 
-            <div class="col-12 col-md-4">
-                <img src="assets/images/galeria 6.jpg" 
-                     alt="Adulto mayor" 
-                     class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+                            <img src="assets/images/galeria 1.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Adultos mayores">
+
+                        </div>
+
+                        <!-- Imagen 2 -->
+                        <div class="carousel-item">
+
+                            <img src="assets/images/galeria 2.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Actividades de adultos mayores">
+
+                        </div>
+
+                        <!-- Imagen 3 -->
+                        <div class="carousel-item">
+
+                            <img src="assets/images/galeria 3.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Espacios del hogar geriátrico">
+
+                        </div>
+
+                        <!-- Imagen 4 -->
+                        <div class="carousel-item">
+
+                            <img src="assets/images/galeria 4.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Momentos especiales">
+
+                        </div>
+
+                        <!-- Imagen 5 -->
+                        <div class="carousel-item">
+
+                            <img src="assets/images/galeria 5.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Atención a adultos mayores">
+
+                        </div>
+
+                        <!-- Imagen 6 -->
+                        <div class="carousel-item">
+
+                            <img src="assets/images/galeria 6.jpg"
+                                 class="d-block w-100"
+                                 style="height: 450px; object-fit: cover;"
+                                 alt="Bienestar de los residentes">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
+
+<!-- ============ FIN GALERÍA ============ -->
 
 
 
@@ -411,89 +568,236 @@ fluid">
         </div>
     </div>
 </section>
-        <!--CONTACTO-->
+       
+<!-- CONTACTO -->
+<section id="contacto" aria-labelledby="titulo-contacto" class="py-5">
 
-        <section id="contacto" aria-labelledby="titulo-contacto" class="py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <span class="text-success fw-bold text-uppercase small tracking-wider">
-                            CONTÁCTENOS
-                            </span>
-                            <h2 id="titulo-contacto" class="display-6 fw-bold mb-3" style="color: #00304D;">
-                                Estamos aquí para ayudarle
-                            </h2>
-                           <p class="text-muted mb-4 lead fs-6">
-                Contáctenos para conocer más sobre nuestros servicios y cómo podemos ayudar a su familiar a disfrutar de una vida plena y con cuidado de calidad.</p>
-                            <address class="fst-normal d-flex flex-column gap-3 fs-6">
-                            <div class="d-flex align-items-center gap-3">
-                                <span class="fs-5">📍</span>
-                                <span>calle 18 sur n°10-44 sur </span>
-                            </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <span class="fs-5">📞</span>
-                                <a href="tel:+573001687718" class="text-decoration-none text-dark">
-                                    +57 3001687718
-                                </a>
-                            </div>
+    <div class="container">
 
-                            <div class="d-flex align-items-center gap-3">
-                                <span class="fs-5">✉️</span>
-                                <a href="mailto:info@campoalegre.com.ar" class="text-decoration-none text-dark">
-                                    info@campoalegre.com.ar
-                                </a>
-                            </div>
+        <div class="row g-5 align-items-center">
 
-                            <div class="d-flex align-items-center gap-3 text-muted">
-                                <span class="fs-5">🕒</span>
-                                <span>Atención 24 hs, los 365 días</span>
-                            </div>
-                        </address>
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="col-12 col-lg-6">
+
+                <span class="text-success fw-bold text-uppercase small">
+                    CONTÁCTENOS
+                </span>
+
+                <h2 id="titulo-contacto" class="display-6 fw-bold mb-3"
+                    style="color: #00304D;">
+                    Estamos aquí para ayudarle
+                </h2>
+
+                <p class="text-muted mb-4 lead fs-6">
+                    Contáctenos para conocer más sobre nuestros servicios
+                    y cómo podemos ayudar a su familiar a disfrutar de una
+                    vida plena y con cuidado de calidad.
+                </p>
+
+                <address class="fst-normal d-flex flex-column gap-3 fs-6">
+
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-5">📍</span>
+                        <span>Calle 18 Sur N° 10-44 Sur</span>
                     </div>
 
-                    
-                    <div class="col-12 col-lg-6">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5" style="background-color: #f8f9fa;">
-                         <form>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-5">📞</span>
+                        <a href="tel:+573001687718"
+                           class="text-decoration-none text-dark">
+                            +57 3001687718
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-5">✉️</span>
+                        <a href="mailto:info@campoalegre.com.ar"
+                           class="text-decoration-none text-dark">
+                            info@campoalegre.com.ar
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3 text-muted">
+                        <span class="fs-5">🕒</span>
+                        <span>Atención 24 hs, los 365 días</span>
+                    </div>
+
+                </address>
+
+            </div>
+
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="col-12 col-lg-6">
+
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5"
+                     style="background-color: #f8f9fa;">
+
+                    <form>
+
                         <div class="row g-3 mb-3">
+
                             <div class="col-md-6">
-                                    <label for="nombre" class="form-label fw-medium text-dark">Nombre</label>
-                                    <input type="text" class="form-control rounded-3 border-light-subtle bg-white py-2" id="nombre" placeholder="Juan">
+                                <label for="nombre"
+                                       class="form-label fw-medium text-dark">
+                                    Nombre
+                                </label>
+
+                                <input type="text"
+                                       class="form-control rounded-3 border-light-subtle bg-white py-2"
+                                       id="nombre"
+                                       placeholder="Juan">
                             </div>
+
                             <div class="col-md-6">
-                                <label for="apellido" class="form-label fw-medium text-dark">Apellido</label>
-                            <input type="text" class="form-control rounded-3 border-light-subtle bg-white py-2" id="apellido" placeholder="García">                                    </div>
-                                </div>
+                                <label for="apellido"
+                                       class="form-label fw-medium text-dark">
+                                    Apellido
+                                </label>
 
-                                <div class="mb-3">
-                                    <label for="email" class="form-label fw-medium text-dark">Email</label>
-                                    <input type="email" class="form-control rounded-3 border-light-subtle bg-white py-2" id="email" placeholder="juan@email.com">
-                                </div>
+                                <input type="text"
+                                       class="form-control rounded-3 border-light-subtle bg-white py-2"
+                                       id="apellido"
+                                       placeholder="García">
+                            </div>
 
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label fw-medium text-dark">Teléfono</label>
-                                    <input type="tel" class="form-control rounded-3 border-light-subtle bg-white py-2" id="telefono" placeholder="+54 11 ...">
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="mensaje" class="form-label fw-medium text-dark">Mensaje</label>
-                                    <textarea class="form-control rounded-3 border-light-subtle bg-white" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarle?"></textarea>
-                                </div>
-
-                                <button type="submit" class="btn w-100 text-white fw-bold py-2 rounded-3" style="background-color: #196f3d;">
-                                    Enviar mensaje
-                                </button>
-                                </form>
-                    </div>
                         </div>
 
-                    </div>
-                   </div>
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.3560702895843!2d-72.94355713081931!3d5.695444694922893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45b3ea7bd65f%3A0xb68958fd519795a6!2sCl.%2018%20Sur%20%2310-44%2C%20Sogamoso%2C%20Boyac%C3%A1!5e1!3m2!1ses!2sco!4v1790373119517!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </section>
+                        <div class="mb-3">
+                            <label for="email"
+                                   class="form-label fw-medium text-dark">
+                                Email
+                            </label>
 
-    </main>
-            
+                            <input type="email"
+                                   class="form-control rounded-3 border-light-subtle bg-white py-2"
+                                   id="email"
+                                   placeholder="juan@email.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono"
+                                   class="form-label fw-medium text-dark">
+                                Teléfono
+                            </label>
+
+                            <input type="tel"
+                                   class="form-control rounded-3 border-light-subtle bg-white py-2"
+                                   id="telefono"
+                                   placeholder="+57 300...">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mensaje"
+                                   class="form-label fw-medium text-dark">
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                class="form-control rounded-3 border-light-subtle bg-white"
+                                id="mensaje"
+                                rows="4"
+                                placeholder="¿En qué podemos ayudarle?"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="btn w-100 text-white fw-bold py-2 rounded-3"
+                                style="background-color: #196f3d;">
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAPA DE UBICACIÓN -->
+    <div class="container mt-5">
+
+        <div class="text-center mb-4">
+
+            <span class="text-success fw-bold text-uppercase small">
+                NUESTRA UBICACIÓN
+            </span>
+
+            <h2 class="fw-bold mt-2" style="color: #00304D;">
+                Encuéntranos fácilmente
+            </h2>
+
+            <p class="text-muted">
+                Estamos ubicados en Sogamoso, Boyacá.
+                ¡Será un gusto recibirte!
+            </p>
+
+        </div>
+
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+            <div class="row g-0 align-items-stretch">
+
+                <!-- MAPA -->
+                <div class="col-12 col-lg-8">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.3560702895843!2d-72.94355713081931!3d5.695444694922893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45b3ea7bd65f%3A0xb68958fd519795a6!2sCl.%2018%20Sur%20%2310-44%2C%20Sogamoso%2C%20Boyac%C3%A1!5e1!3m2!1ses!2sco!4v1790373119517!5m2!1ses!2sco"
+                        width="100%"
+                        height="400"
+                        style="border:0; display:block;"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+
+                </div>
+
+                <!-- INFORMACIÓN DE UBICACIÓN -->
+                <div class="col-12 col-lg-4 d-flex align-items-center"
+                     style="background-color: #f1f8f2;">
+
+                    <div class="p-4 text-center w-100">
+
+                        <i class="bi bi-geo-alt-fill text-success"
+                           style="font-size: 50px;">
+                        </i>
+
+                        <h4 class="fw-bold mt-3" style="color: #00304D;">
+                            Hogar Geriátrico
+                        </h4>
+
+                        <p class="text-muted">
+                            Calle 18 Sur #10-44
+                            <br>
+                            Sogamoso, Boyacá
+                        </p>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Cl.+18+Sur+%2310-44%2C+Sogamoso%2C+Boyac%C3%A1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-success rounded-pill px-4 mt-2">
+
+                            <i class="bi bi-sign-turn-right-fill me-2"></i>
+                            Cómo llegar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FIN CONTACTO -->
+</main>
+
 
     <!--PIE DE PÁGINA-->
 
@@ -506,8 +810,17 @@ fluid">
 </div>
     </footer>
        
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a href="https://wa.me/573001234567"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Abrir WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- SCRIPT DE BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
