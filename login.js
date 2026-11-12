@@ -1,7 +1,5 @@
-
-// ========================================
 // 1. ANIMACIÓN DEL BOTÓN INGRESAR
-// ========================================
+
 
 // Obtener el botón
 var btn = document.getElementById("btnIngresar");
@@ -19,9 +17,9 @@ if (btn) {
 }
 
 
-// ========================================
+
 // 2. ANIMACIÓN DE ERROR DEL FORMULARIO
-// ========================================
+
 
 // Obtener el formulario
 var formularioLogin = document.getElementById("formularioLogin");
@@ -48,11 +46,12 @@ function animarError() {
 }
 
 
-// ========================================
+
 // 3. MOSTRAR Y OCULTAR CONTRASEÑA
-// ========================================
+
 
 // Obtener los elementos
+
 var password = document.getElementById("password");
 var btnMostrar = document.getElementById("btnMostrar");
 var iconoOjo = document.getElementById("iconoOjo");
@@ -83,9 +82,8 @@ if (btnMostrar && password && iconoOjo) {
     };
 
 }
-// ========================================
 // 4. MODO CLARO Y OSCURO
-// ========================================
+
 
 // Obtener elementos
 var btnTema = document.getElementById("btnTema");
