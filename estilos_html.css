@@ -1,0 +1,350 @@
+ 
+    /* =================================
+       BOTÓN FLOTANTE DE WHATSAPP
+    ================================= */
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        text-decoration: none;
+        z-index: 1000;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        animation: movimientoWhatsApp 2s infinite;
+        transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+        background-color: #188f45;
+        color: white;
+        animation-play-state: paused;
+        transform: scale(1.1);
+    }
+
+    @keyframes movimientoWhatsApp {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* =================================
+       EFECTOS DEL MENÚ DE NAVEGACIÓN
+    ================================= */
+
+    .navbar .nav-link {
+        color: #333333;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .nav-link:hover {
+        color: #25a900;
+        transform: translateY(-3px);
+    }
+
+    /* Línea animada debajo de los enlaces */
+
+    .navbar .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #25a900;
+        transition: width 0.3s ease;
+    }
+
+    .navbar .nav-link:hover::after {
+        width: 100%;
+    }
+
+
+    /* =================================
+       BOTÓN INICIAR SESIÓN
+    ================================= */
+
+    .navbar .btn {
+        transition: all 0.3s ease;
+    }
+
+    .navbar .btn:hover {
+        background-color: #188000;
+        border-color: #188000;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+
+/* ============ BOTÓN MODO OSCURO ============ */
+
+.tema-btn {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1050;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00304D;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tema-btn:hover {
+    background-color: #005477;
+}
+
+/* ============ MODO OSCURO ============ */
+
+body.modo-oscuro {
+    background-color: #121820 !important;
+    color: #eeeeee !important;
+}
+
+/* Fondo de las secciones */
+body.modo-oscuro section {
+    background-color: #1c2733 !important;
+    color: #eeeeee !important;
+}
+
+/* Títulos */
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4 {
+    color: #eeeeee !important;
+}
+
+/* Párrafos y textos */
+body.modo-oscuro p,
+body.modo-oscuro li,
+body.modo-oscuro label {
+    color: #dddddd !important;
+}
+
+/* Tarjetas */
+body.modo-oscuro .card {
+    background-color: #263442 !important;
+    color: #eeeeee !important;
+}
+
+/* Barra de navegación */
+body.modo-oscuro nav,
+body.modo-oscuro .navbar {
+    background-color: #101820 !important;
+}
+
+/* Pie de página */
+body.modo-oscuro footer {
+    background-color: #101820 !important;
+    color: #eeeeee !important;
+}
+
+/* Botón cuando está activado el modo oscuro */
+body.modo-oscuro .tema-btn {
+    background-color: #f0c75e;
+    color: #17212b;
+}
+
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN EN MODO OSCURO
+   ========================================== */
+
+/* Cambia el color de los enlaces del menú a blanco
+   cuando el usuario activa el modo oscuro */
+body.modo-oscuro .navbar .nav-link {
+    color: #ffffff !important;
+}
+
+/* Cambia el color de los enlaces cuando
+   el usuario pasa el cursor sobre ellos */
+body.modo-oscuro .navbar .nav-link:hover {
+    color: #80cfff !important;
+}
+
+/* Cambia el color del enlace que está activo,
+   es decir, la sección que se encuentra seleccionada */
+body.modo-oscuro .navbar .nav-link.active {
+    color: #80cfff !important;
+}
+
+/* Cambia el color del nombre o logotipo de GERISOFT
+   para que se pueda leer sobre el fondo oscuro */
+body.modo-oscuro .navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Cambia el borde del botón que despliega el menú
+   cuando la página se visualiza desde un celular */
+body.modo-oscuro .navbar-toggler {
+    border-color: #ffffff;
+}
+
+/* Invierte los colores del icono de las tres líneas
+   para que se vea blanco en el modo oscuro */
+body.modo-oscuro .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ==========================================
+   PRESENTACIÓN PRINCIPAL - MODO CLARO
+   ========================================== */
+
+/* Degradado blanco sobre la imagen */
+.degradado-inicio {
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+/* Texto de bienvenida */
+.texto-bienvenida {
+    color: #198754;
+}
+
+/* Título principal */
+.titulo-inicio {
+    color: #212529;
+}
+
+/* Subtítulo */
+.subtitulo-inicio {
+    color: #198754;
+}
+
+/* Descripción */
+.descripcion-inicio {
+    color: #6c757d;
+}
+
+
+/* ==========================================
+   PRESENTACIÓN PRINCIPAL - MODO OSCURO
+   ========================================== */
+
+/* Cambia el degradado blanco por uno oscuro */
+body.modo-oscuro .degradado-inicio {
+    background: linear-gradient(
+        90deg,
+        rgba(15, 25, 35, 0.97) 0%,
+        rgba(15, 25, 35, 0.88) 45%,
+        rgba(15, 25, 35, 0.35) 100%
+    );
+}
+
+/* Color del texto de bienvenida */
+body.modo-oscuro .texto-bienvenida {
+    color: #75d6a5;
+}
+
+/* Color del título principal */
+body.modo-oscuro .titulo-inicio {
+    color: #ffffff;
+}
+
+/* Color del subtítulo */
+body.modo-oscuro .subtitulo-inicio {
+    color: #75d6a5;
+}
+
+/* Color de la descripción */
+body.modo-oscuro .descripcion-inicio {
+    color: #e0e6eb;
+}
+
+
+
+/* ==========================================
+   PRESENTACIÓN PRINCIPAL - MODO CLARO
+   ========================================== */
+
+/* Degradado blanco sobre la imagen */
+.degradado-inicio {
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+/* Texto de bienvenida */
+.texto-bienvenida {
+    color: #198754;
+}
+
+/* Título principal */
+.titulo-inicio {
+    color: #212529;
+}
+
+/* Subtítulo */
+.subtitulo-inicio {
+    color: #198754;
+}
+
+/* Descripción */
+.descripcion-inicio {
+    color: #6c757d;
+}
+
+
+/* ==========================================
+   PRESENTACIÓN PRINCIPAL - MODO OSCURO
+   ========================================== */
+
+/* Cambia el degradado blanco por uno oscuro */
+body.modo-oscuro .degradado-inicio {
+    background: linear-gradient(
+        90deg,
+        rgba(15, 25, 35, 0.97) 0%,
+        rgba(15, 25, 35, 0.88) 45%,
+        rgba(15, 25, 35, 0.35) 100%
+    );
+}
+
+/* Color del texto de bienvenida */
+body.modo-oscuro .texto-bienvenida {
+    color: #75d6a5;
+}
+
+/* Color del título principal */
+body.modo-oscuro .titulo-inicio {
+    color: #ffffff;
+}
+
+/* Color del subtítulo */
+body.modo-oscuro .subtitulo-inicio {
+    color: #75d6a5;
+}
+
+/* Color de la descripción */
+body.modo-oscuro .descripcion-inicio {
+    color: #e0e6eb;
+}

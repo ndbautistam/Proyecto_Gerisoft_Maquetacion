@@ -18,101 +18,7 @@ rel="stylesheet">
 <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Estilos del botón WhatsApp -->
-    <style>
-        
-    /* =================================
-       BOTÓN FLOTANTE DE WHATSAPP
-    ================================= */
-
-    .whatsapp-float {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 60px;
-        height: 60px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 35px;
-        text-decoration: none;
-        z-index: 1000;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-        animation: movimientoWhatsApp 2s infinite;
-        transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-        background-color: #188f45;
-        color: white;
-        animation-play-state: paused;
-        transform: scale(1.1);
-    }
-
-    @keyframes movimientoWhatsApp {
-        0%, 100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-
-    /* =================================
-       EFECTOS DEL MENÚ DE NAVEGACIÓN
-    ================================= */
-
-    .navbar .nav-link {
-        color: #333333;
-        position: relative;
-        transition: all 0.3s ease;
-    }
-
-    .navbar .nav-link:hover {
-        color: #25a900;
-        transform: translateY(-3px);
-    }
-
-    /* Línea animada debajo de los enlaces */
-
-    .navbar .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: 0;
-        left: 0;
-        background-color: #25a900;
-        transition: width 0.3s ease;
-    }
-
-    .navbar .nav-link:hover::after {
-        width: 100%;
-    }
-
-
-    /* =================================
-       BOTÓN INICIAR SESIÓN
-    ================================= */
-
-    .navbar .btn {
-        transition: all 0.3s ease;
-    }
-
-    .navbar .btn:hover {
-        background-color: #188000;
-        border-color: #188000;
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-
-    </style>
+    <link rel="stylesheet" href="estilos_html.css">
 
 </head>
 
@@ -158,37 +64,35 @@ fluid">
     <!--CONTENIDO PRINCIPAL-->
 
     <main>
-
-
+        
         <!--INICIO-->
-
-
        <section id="inicio" class="position-relative d-flex align-items-center py-5 overflow-hidden" style="min-height: 85vh;">
     
     <!-- Imagen de fondo -->
     <img src="assets/images/imagen index .jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="z-index: 1;" alt="Presentación principal">
 
-    <!--Degradado blanco-->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 2; background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.2) 100%);"></div>
-
+    <!-- Degradado de fondo de la presentación -->
+<div class="degradado-inicio position-absolute top-0 start-0 w-100 h-100">
+</div>
+    
     <!--lo que va encima de la imagen -->
     <div class="container position-relative py-5" style="z-index: 3;">
         <div class="row">
             <div class="col-lg-5 col-md-7 text-start">
 
-                <p class="text-success text-uppercase fw-bold mb-2 fs-7 tracking-wide">
+                <p class="texto-bienvenida text-uppercase fw-bold mb-2 fs-7 tracking-wide">
                     BIENVENIDOS A CAMPO ALEGRE
                 </p>
 
-                <h1 class="display-3 fw-bold text-dark mb-1" style="font-family: serif;">
+                <h1 class="titulo-inicio display-3 fw-bold mb-1" style="font-family: serif;">
                     Hogar Geriátrico
                 </h1>
 
-                <h2 class="display-6 text-success fw-bold mb-3" style="font-family: serif;">
+               <h2 class="subtitulo-inicio display-6 fw-bold mb-3" style="font-family: serif;">
                     Amor, Vida y Servicio
                 </h2>
 
-                <p class="text-muted mb-4 fs-6">
+               <p class="descripcion-inicio mb-4 fs-6">
                     Brindamos atención integral, humana y especializada para mejorar la calidad de vida de nuestros adultos mayores.
                 </p>
 
@@ -378,8 +282,8 @@ fluid">
 
 
 
-<!-- ============ GALERÍA AUTOMÁTICA ============ -->
 
+<!-- ============ GALERÍA AUTOMÁTICA ============ -->
 <section id="galeria"
          class="py-5"
          aria-labelledby="titulo-galeria"
@@ -478,6 +382,69 @@ fluid">
 
                     </div>
 
+                    <!-- Indicadores para seleccionar las fotografías -->
+                    <div class="carousel-indicators galeria-indicators">
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-current="true"
+                                aria-label="Imagen 1"></button>
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="1"
+                                aria-label="Imagen 2"></button>
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="2"
+                                aria-label="Imagen 3"></button>
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="3"
+                                aria-label="Imagen 4"></button>
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="4"
+                                aria-label="Imagen 5"></button>
+
+                        <button type="button"
+                                data-bs-target="#galeriaAutomatica"
+                                data-bs-slide-to="5"
+                                aria-label="Imagen 6"></button>
+
+                    </div>
+
+                    <!-- Flecha para imagen anterior -->
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#galeriaAutomatica"
+                            data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"
+                              aria-hidden="true"></span>
+
+                        <span class="visually-hidden">Anterior</span>
+
+                    </button>
+
+                    <!-- Flecha para imagen siguiente -->
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#galeriaAutomatica"
+                            data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"
+                              aria-hidden="true"></span>
+
+                        <span class="visually-hidden">Siguiente</span>
+
+                    </button>
+
                 </div>
 
             </div>
@@ -487,8 +454,8 @@ fluid">
     </div>
 
 </section>
-
 <!-- ============ FIN GALERÍA ============ -->
+
 
 
 
@@ -819,8 +786,18 @@ fluid">
     <i class="bi bi-whatsapp"></i>
 </a>
 
+<body>
+
+    <!-- Botón para cambiar el tema -->
+    <button id="btnTema" class="tema-btn" type="button">
+        🌙 Modo oscuro
+    </button>
+
+
 <!-- SCRIPT DE BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Archivo JavaScript del modo oscuro -->
+<script src="html.js"></script>
 </body>
 
 </html>
